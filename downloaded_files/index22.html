@@ -1,0 +1,2148 @@
+<html lang="en">
+ <head>
+  <title>
+   The GNU C Programming Tutorial
+  </title>
+  <meta content="text/html" http-equiv="Content-Type"/>
+  <meta content="The GNU C Programming Tutorial" name="description"/>
+  <meta content="makeinfo 4.2" name="generator"/>
+  <link href="http://www.gnu.org/software/texinfo/" rel="generator-home"/>
+ </head>
+ <body>
+  <h5 class="menu">
+   <a href="http://www.crasseux.com/art/">
+    Art and Comics
+   </a>
+   <a href="http://www.crasseux.com/blog/">
+    Blog
+   </a>
+   <a href="http://www.crasseux.com/criticalmass/">
+    Critical Mass
+   </a>
+   <a href="http://www.crasseux.com/emacs/">
+    Emacs
+   </a>
+   <a href="http://www.crasseux.com/freedom/">
+    Free Stuff
+   </a>
+   <a href="http://www.crasseux.com/games/">
+    Games
+   </a>
+   <a href="http://www.crasseux.com/linux/">
+    Gnu/Linux
+   </a>
+   <a href="http://www.crasseux.com/">
+    Home
+   </a>
+   <a href="http://www.crasseux.com/japanese/">
+    Learn Japanese
+   </a>
+   <a href="http://www.crasseux.com/links/">
+    Links
+   </a>
+   <a href="http://www.crasseux.com/montreal/">
+    Montreal
+   </a>
+   <a href="http://www.crasseux.com/music/">
+    Music
+   </a>
+   <a href="http://www.crasseux.com/news/">
+    News
+   </a>
+   <a href="http://www.crasseux.com/essays/">
+    Some Essays
+   </a>
+   <a href="http://crasseux.com/priv_stats/">
+    Statistics
+   </a>
+  </h5>
+  <div class="main">
+   <script type="text/javascript">
+    ( function() {
+    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+    var unit = {"calltype":"async[2]","publisher":"trustno1","width":550,"height":250,"sid":"Chitika Default"};
+    var placement_id = window.CHITIKA.units.length;
+    window.CHITIKA.units.push(unit);
+    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+}());
+   </script>
+   <script async="" src="//cdn.chitika.net/getads.js" type="text/javascript">
+   </script>
+   <h1>
+    The GNU C Programming Tutorial
+   </h1>
+   Edition 4.1
+   <p>
+    Node:
+    <a name="Top">
+     Top
+    </a>
+    ,
+Next:
+    <a accesskey="n" href="Preface.html#Preface" rel="next">
+     Preface
+    </a>
+    ,
+Previous:
+    <a accesskey="p" href="../" rel="previous">
+     (dir)
+    </a>
+    ,
+Up:
+    <a accesskey="u" href="../" rel="up">
+     (dir)
+    </a>
+    <hr/>
+    <br/>
+    <ul>
+     <li>
+      <a accesskey="1" href="Preface.html#Preface">
+       Preface
+      </a>
+      :
+      <li>
+       <a accesskey="2" href="Introduction.html#Introduction">
+        Introduction
+       </a>
+       :
+       <li>
+        <a accesskey="3" href="Using-a-compiler.html#Using%20a%20compiler">
+         Using a compiler
+        </a>
+        :
+        <li>
+         <a accesskey="4" href="The-form-of-a-C-program.html#The%20form%20of%20a%20C%20program">
+          The form of a C program
+         </a>
+         :
+         <li>
+          <a accesskey="5" href="Functions.html#Functions">
+           Functions
+          </a>
+          :
+          <li>
+           <a accesskey="6" href="Variables-and-declarations.html#Variables%20and%20declarations">
+            Variables and declarations
+           </a>
+           :
+           <li>
+            <a accesskey="7" href="Scope.html#Scope">
+             Scope
+            </a>
+            :
+            <li>
+             <a accesskey="8" href="Expressions-and-operators.html#Expressions%20and%20operators">
+              Expressions and operators
+             </a>
+             :
+             <li>
+              <a accesskey="9" href="Parameters.html#Parameters">
+               Parameters
+              </a>
+              :
+              <li>
+               <a href="Pointers.html#Pointers">
+                Pointers
+               </a>
+               :
+               <li>
+                <a href="Decisions.html#Decisions">
+                 Decisions
+                </a>
+                :
+                <li>
+                 <a href="Loops.html#Loops">
+                  Loops
+                 </a>
+                 :
+                 <li>
+                  <a href="Preprocessor-directives.html#Preprocessor%20directives">
+                   Preprocessor directives
+                  </a>
+                  :
+                  <li>
+                   <a href="Libraries.html#Libraries">
+                    Libraries
+                   </a>
+                   :
+                   <li>
+                    <a href="Arrays.html#Arrays">
+                     Arrays
+                    </a>
+                    :
+                    <li>
+                     <a href="Strings.html#Strings">
+                      Strings
+                     </a>
+                     :
+                     <li>
+                      <a href="Input-and-output.html#Input%20and%20output">
+                       Input and output
+                      </a>
+                      :
+                      <li>
+                       <a href="Putting-a-program-together.html#Putting%20a%20program%20together">
+                        Putting a program together
+                       </a>
+                       :
+                       <li>
+                        <a href="Advanced-operators.html#Advanced%20operators">
+                         Advanced operators
+                        </a>
+                        :
+                        <li>
+                         <a href="More-data-types.html#More%20data%20types">
+                          More data types
+                         </a>
+                         :
+                         <li>
+                          <a href="Data-structures.html#Data%20structures">
+                           Data structures
+                          </a>
+                          :
+                          <li>
+                           <a href="Recursion.html#Recursion">
+                            Recursion
+                           </a>
+                           :
+                           <li>
+                            <a href="Style.html#Style">
+                             Style
+                            </a>
+                            :
+                            <li>
+                             <a href="Debugging.html#Debugging">
+                              Debugging
+                             </a>
+                             :
+                             <li>
+                              <a href="Example-programs.html#Example%20programs">
+                               Example programs
+                              </a>
+                              :
+                              <li>
+                               <a href="A-note-from-the-original-author.html#A%20note%20from%20the%20original%20author">
+                                A note from the original author
+                               </a>
+                               :
+                               <li>
+                                <a href="Reserved-words-in-C.html#Reserved%20words%20in%20C">
+                                 Reserved words in C
+                                </a>
+                                :
+                                <li>
+                                 <a href="Precedence-of-operators.html#Precedence%20of%20operators">
+                                  Precedence of operators
+                                 </a>
+                                 :
+                                 <li>
+                                  <a href="Special-characters.html#Special%20characters">
+                                   Special characters
+                                  </a>
+                                  :
+                                  <li>
+                                   <a href="Character-conversion-table.html#Character%20conversion%20table">
+                                    Character conversion table
+                                   </a>
+                                   :
+                                   <li>
+                                    <a href="A-word-about-goto.html#A%20word%20about%20goto">
+                                     A word about goto
+                                    </a>
+                                    :
+                                    <li>
+                                     <a href="Answers-to-questions.html#Answers%20to%20questions">
+                                      Answers to questions
+                                     </a>
+                                     :
+                                     <li>
+                                      <a href="Bibliography.html#Bibliography">
+                                       Bibliography
+                                      </a>
+                                      :
+                                      <li>
+                                       <a href="Glossary.html#Glossary">
+                                        Glossary
+                                       </a>
+                                       :
+                                       <li>
+                                        <a href="Code-index.html#Code%20index">
+                                         Code index
+                                        </a>
+                                        :
+                                        <li>
+                                         <a href="Concept-index.html#Concept%20index">
+                                          Concept index
+                                         </a>
+                                         :
+                                         <li>
+                                          <a href="Bits-and-pieces.html#Bits%20and%20pieces">
+                                           Bits and pieces
+                                          </a>
+                                          :
+                                         </li>
+                                        </li>
+                                       </li>
+                                      </li>
+                                     </li>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </li>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </li>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </li>
+        </li>
+       </li>
+      </li>
+     </li>
+    </ul>
+    <hr/>
+    <h2>
+     Table of Contents
+    </h2>
+    <ul>
+     <li>
+      <a name="toc_Preface">
+      </a>
+      <a href="Preface.html#Preface">
+       Preface
+      </a>
+      <li>
+       <a name="toc_Introduction">
+       </a>
+       <a href="Introduction.html#Introduction">
+        Introduction
+       </a>
+       <ul>
+        <li>
+         <a href="Advantages-of-C.html#Advantages%20of%20C">
+          The advantages of C
+         </a>
+         <li>
+          <a href="Questions-for-Chapter-1.html#Questions%20for%20Chapter%201">
+           Questions for Chapter 1
+          </a>
+         </li>
+        </li>
+       </ul>
+       <li>
+        <a name="toc_Using%20a%20compiler">
+        </a>
+        <a href="Using-a-compiler.html#Using%20a%20compiler">
+         Using a compiler
+        </a>
+        <ul>
+         <li>
+          <a href="Basic-ideas.html#Basic%20ideas">
+           Basic ideas about C
+          </a>
+          <li>
+           <a href="The-compiler.html#The%20compiler">
+            The compiler
+           </a>
+           <li>
+            <a href="File-names.html#File%20names">
+             File names
+            </a>
+            <li>
+             <a href="Errors.html#Errors">
+              Errors
+             </a>
+             <ul>
+              <li>
+               <a href="Typographical-errors.html#Typographical%20errors">
+                Typographical errors
+               </a>
+               <li>
+                <a href="Type-errors.html#Type%20errors">
+                 Type errors
+                </a>
+               </li>
+              </li>
+             </ul>
+             <li>
+              <a href="Questions-for-Chapter-2.html#Questions%20for%20Chapter%202">
+               Questions for Chapter 2
+              </a>
+             </li>
+            </li>
+           </li>
+          </li>
+         </li>
+        </ul>
+        <li>
+         <a name="toc_The%20form%20of%20a%20C%20program">
+         </a>
+         <a href="The-form-of-a-C-program.html#The%20form%20of%20a%20C%20program">
+          The form of a C program
+         </a>
+         <ul>
+          <li>
+           <a href="A-word-about-style.html#A%20word%20about%20style">
+            A word about style
+           </a>
+           <li>
+            <a href="Comments.html#Comments">
+             Comments
+            </a>
+            <li>
+             <a href="Example-comment.html#Example%20comment">
+              Example 1
+             </a>
+             <li>
+              <a href="Questions-for-Chapter-3.html#Questions%20for%20Chapter%203">
+               Questions for Chapter 3
+              </a>
+             </li>
+            </li>
+           </li>
+          </li>
+         </ul>
+         <li>
+          <a name="toc_Functions">
+          </a>
+          <a href="Functions.html#Functions">
+           Functions
+          </a>
+          <ul>
+           <li>
+            <a href="Function-names.html#Function%20names">
+             Function names
+            </a>
+            <li>
+             <a href="Function-examples.html#Function%20examples">
+              Function examples
+             </a>
+             <li>
+              <a href="Functions-with-values.html#Functions%20with%20values">
+               Functions with values
+              </a>
+              <li>
+               <a href="Function-prototyping.html#Function%20prototyping">
+                Function prototyping
+               </a>
+               <li>
+                <a href="The-exit-function.html#The%20exit%20function">
+                 The
+                 <code>
+                  exit
+                 </code>
+                 function
+                </a>
+                <li>
+                 <a href="Questions-for-Chapter-4.html#Questions%20for%20Chapter%204">
+                  Questions for Chapter 4
+                 </a>
+                </li>
+               </li>
+              </li>
+             </li>
+            </li>
+           </li>
+          </ul>
+          <li>
+           <a name="toc_Variables%20and%20declarations">
+           </a>
+           <a href="Variables-and-declarations.html#Variables%20and%20declarations">
+            Variables and declarations
+           </a>
+           <ul>
+            <li>
+             <a href="Integer-variables.html#Integer%20variables">
+              Integer variables
+             </a>
+             <ul>
+              <li>
+               <a href="The-char-type.html#The%20char%20type">
+                The
+                <code>
+                 char
+                </code>
+                type
+               </a>
+               <li>
+                <a href="Floating-point-variables.html#Floating%20point%20variables">
+                 Floating point variables
+                </a>
+               </li>
+              </li>
+             </ul>
+             <li>
+              <a href="Declarations.html#Declarations">
+               Declarations
+              </a>
+              <li>
+               <a href="Initialization.html#Initialization">
+                Initialization
+               </a>
+               <li>
+                <a href="The-cast-operator.html#The%20cast%20operator">
+                 The cast operator
+                </a>
+                <ul>
+                 <li>
+                  <a href="Cast-operator-demo.html#Cast%20operator%20demo">
+                   Cast operator demo
+                  </a>
+                 </li>
+                </ul>
+                <li>
+                 <a href="Storage-classes.html#Storage%20classes">
+                  Storage classes
+                 </a>
+                 <ul>
+                  <li>
+                   <a href="External-variables.html#External%20variables">
+                    External variables
+                   </a>
+                   <li>
+                    <a href="Static-variables.html#Static%20variables">
+                     Static variables
+                    </a>
+                    <li>
+                     <a href="Other-storage-classes.html#Other%20storage%20classes">
+                      Other storage classes
+                     </a>
+                    </li>
+                   </li>
+                  </li>
+                 </ul>
+                 <li>
+                  <a href="Questions-for-Chapter-5.html#Questions%20for%20Chapter%205">
+                   Questions for Chapter 5
+                  </a>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </li>
+           </ul>
+           <li>
+            <a name="toc_Scope">
+            </a>
+            <a href="Scope.html#Scope">
+             Scope
+            </a>
+            <ul>
+             <li>
+              <a href="Global-variables.html#Global%20variables">
+               Global Variables
+              </a>
+              <li>
+               <a href="Local-variables.html#Local%20variables">
+                Local Variables
+               </a>
+               <li>
+                <a href="Communication-via-parameters.html#Communication%20via%20parameters">
+                 Communication via parameters
+                </a>
+                <li>
+                 <a href="Scope-example.html#Scope%20example">
+                  Scope example
+                 </a>
+                 <li>
+                  <a href="Questions-for-Chapter-6.html#Questions%20for%20Chapter%206">
+                   Questions for Chapter 6
+                  </a>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </ul>
+            <li>
+             <a name="toc_Expressions%20and%20operators">
+             </a>
+             <a href="Expressions-and-operators.html#Expressions%20and%20operators">
+              Expressions and operators
+             </a>
+             <ul>
+              <li>
+               <a href="The-assignment-operator.html#The%20assignment%20operator">
+                The assignment operator
+               </a>
+               <ul>
+                <li>
+                 <a href="Important-note-about-assignment.html#Important%20note%20about%20assignment">
+                  Important note about assignment
+                 </a>
+                </li>
+               </ul>
+               <li>
+                <a href="Expressions-and-values.html#Expressions%20and%20values">
+                 Expressions and values
+                </a>
+                <li>
+                 <a href="Expressions.html#Expressions">
+                  Expressions
+                 </a>
+                 <li>
+                  <a href="Parentheses-and-Priority.html#Parentheses%20and%20Priority">
+                   Parentheses and Priority
+                  </a>
+                  <li>
+                   <a href="Unary-Operator-Precedence.html#Unary%20Operator%20Precedence">
+                    Unary Operator Precedence
+                   </a>
+                   <li>
+                    <a href="Special-Assignment-Operators------.html#Special%20Assignment%20Operators%20++%20--">
+                     Special Assignment Operators
+                     <code>
+                      ++
+                     </code>
+                     and
+                     <code>
+                      --
+                     </code>
+                    </a>
+                    <li>
+                     <a href="More-Special-Assignments.html#More%20Special%20Assignments">
+                      More Special Assignments
+                     </a>
+                     <li>
+                      <a href="Comparisons-and-logic.html#Comparisons%20and%20logic">
+                       Comparisons and logic
+                      </a>
+                      <li>
+                       <a href="Logical-operators.html#Logical%20operators">
+                        Logical operators
+                       </a>
+                       <ul>
+                        <li>
+                         <a href="Inclusive-OR.html#Inclusive%20OR">
+                          Inclusive OR
+                         </a>
+                        </li>
+                       </ul>
+                       <li>
+                        <a href="Questions-for-Chapter-7.html#Questions%20for%20Chapter%207">
+                         Questions for Chapter 7
+                        </a>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </li>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </ul>
+             <li>
+              <a name="toc_Parameters">
+              </a>
+              <a href="Parameters.html#Parameters">
+               Parameters
+              </a>
+              <ul>
+               <li>
+                <a href="Parameters-in-function-prototypes.html#Parameters%20in%20function%20prototypes">
+                 Parameters in function prototypes
+                </a>
+                <li>
+                 <a href="Value-parameters.html#Value%20parameters">
+                  Value Parameters
+                 </a>
+                 <li>
+                  <a href="Actual-parameters-and-formal-parameters.html#Actual%20parameters%20and%20formal%20parameters">
+                   Actual parameters and formal parameters
+                  </a>
+                  <li>
+                   <a href="Variadic-functions.html#Variadic%20functions">
+                    Variadic functions
+                   </a>
+                   <li>
+                    <a href="Questions-for-Chapter-8.html#Questions%20for%20Chapter%208">
+                     Questions for Chapter 8
+                    </a>
+                   </li>
+                  </li>
+                 </li>
+                </li>
+               </li>
+              </ul>
+              <li>
+               <a name="toc_Pointers">
+               </a>
+               <a href="Pointers.html#Pointers">
+                Pointers
+               </a>
+               <ul>
+                <li>
+                 <a href="Pointer-operators.html#Pointer%20operators">
+                  Pointer operators
+                 </a>
+                 <li>
+                  <a href="Pointer-types.html#Pointer%20types">
+                   Pointer types
+                  </a>
+                  <li>
+                   <a href="Pointers-and-initialization.html#Pointers%20and%20initialization">
+                    Pointers and initialization
+                   </a>
+                   <li>
+                    <a href="Variable-parameters.html#Variable%20parameters">
+                     Variable parameters
+                    </a>
+                    <ul>
+                     <li>
+                      <a href="Passing-pointers-correctly.html#Passing%20pointers%20correctly">
+                       Passing pointers correctly
+                      </a>
+                      <li>
+                       <a href="Another-variable-parameter-example.html#Another%20variable%20parameter%20example">
+                        Another variable parameter example
+                       </a>
+                      </li>
+                     </li>
+                    </ul>
+                    <li>
+                     <a href="Questions-for-Chapter-9.html#Questions%20for%20Chapter%209">
+                      Questions for Chapter 9
+                     </a>
+                    </li>
+                   </li>
+                  </li>
+                 </li>
+                </li>
+               </ul>
+               <li>
+                <a name="toc_Decisions">
+                </a>
+                <a href="Decisions.html#Decisions">
+                 Decisions
+                </a>
+                <ul>
+                 <li>
+                  <a href="if.html#if">
+                   <code>
+                    if
+                   </code>
+                  </a>
+                  <li>
+                   <a href="if...-else....html#if...%20else...">
+                    <code>
+                     if
+                     <small>
+                      ...
+                     </small>
+                     else
+                     <small>
+                      ...
+                     </small>
+                    </code>
+                   </a>
+                   <li>
+                    <a href="Nested-if-statements.html#Nested%20if%20statements">
+                     Nested
+                     <code>
+                      if
+                     </code>
+                     statements
+                    </a>
+                    <li>
+                     <a href="The-question-mark-operator.html#The%20question%20mark%20operator">
+                      The
+                      <code>
+                       ?
+                      </code>
+                      <small>
+                       ...
+                      </small>
+                      <code>
+                       :
+                      </code>
+                      <small>
+                       ...
+                      </small>
+                      operator
+                     </a>
+                     <li>
+                      <a href="The-switch-statement.html#The%20switch%20statement">
+                       The
+                       <code>
+                        switch
+                       </code>
+                       statement
+                      </a>
+                      <li>
+                       <a href="Example-15.html#Example%2015">
+                        Example Listing
+                       </a>
+                       <li>
+                        <a href="Questions-for-Chapter-10.html#Questions%20for%20Chapter%2010">
+                         Questions for Chapter 10
+                        </a>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </li>
+                 </li>
+                </ul>
+                <li>
+                 <a name="toc_Loops">
+                 </a>
+                 <a href="Loops.html#Loops">
+                  Loops
+                 </a>
+                 <ul>
+                  <li>
+                   <a href="while.html#while">
+                    <code>
+                     while
+                    </code>
+                   </a>
+                   <li>
+                    <a href="do...while.html#do...while">
+                     <code>
+                      do
+                     </code>
+                     <small>
+                      ...
+                     </small>
+                     <code>
+                      while
+                     </code>
+                    </a>
+                    <li>
+                     <a href="for.html#for">
+                      <code>
+                       for
+                      </code>
+                     </a>
+                     <li>
+                      <a href="The-flexibility-of-for.html#The%20flexibility%20of%20for">
+                       The flexibility of
+                       <code>
+                        for
+                       </code>
+                      </a>
+                      <li>
+                       <a href="Terminating-and-speeding-loops.html#Terminating%20and%20speeding%20loops">
+                        Terminating and speeding loops
+                       </a>
+                       <ul>
+                        <li>
+                         <a href="Terminating-loops-with-break.html#Terminating%20loops%20with%20break">
+                          Terminating loops with
+                          <code>
+                           break
+                          </code>
+                         </a>
+                         <li>
+                          <a href="Terminating-loops-with-return.html#Terminating%20loops%20with%20return">
+                           Terminating loops with
+                           <code>
+                            return
+                           </code>
+                          </a>
+                          <li>
+                           <a href="Speeding-loops-with-continue.html#Speeding%20loops%20with%20continue">
+                            Speeding loops with
+                            <code>
+                             continue
+                            </code>
+                           </a>
+                          </li>
+                         </li>
+                        </li>
+                       </ul>
+                       <li>
+                        <a href="Nested-loops.html#Nested%20loops">
+                         Nested loops
+                        </a>
+                        <li>
+                         <a href="Questions-for-Chapter-11.html#Questions%20for%20Chapter%2011">
+                          Questions for Chapter 11
+                         </a>
+                        </li>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </li>
+                 </ul>
+                 <li>
+                  <a name="toc_Preprocessor%20directives">
+                  </a>
+                  <a href="Preprocessor-directives.html#Preprocessor%20directives">
+                   Preprocessor directives
+                  </a>
+                  <ul>
+                   <li>
+                    <a href="A-few-directives.html#A%20few%20directives">
+                     A few directives
+                    </a>
+                    <li>
+                     <a href="Macros.html#Macros">
+                      Macros
+                     </a>
+                     <ul>
+                      <li>
+                       <a href="Macro-functions.html#Macro%20functions">
+                        Macro functions
+                       </a>
+                      </li>
+                     </ul>
+                     <li>
+                      <a href="Extended-macro-example.html#Extended%20macro%20example">
+                       Extended macro example
+                      </a>
+                      <li>
+                       <a href="Questions-12.html#Questions%2012">
+                        Questions
+                       </a>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </ul>
+                  <li>
+                   <a name="toc_Libraries">
+                   </a>
+                   <a href="Libraries.html#Libraries">
+                    Libraries
+                   </a>
+                   <ul>
+                    <li>
+                     <a href="Header-files.html#Header%20files">
+                      Header files
+                     </a>
+                     <li>
+                      <a href="Kinds-of-library.html#Kinds%20of%20library">
+                       Kinds of library
+                      </a>
+                      <li>
+                       <a href="Common-library-functions.html#Common%20library%20functions">
+                        Common library functions
+                       </a>
+                       <ul>
+                        <li>
+                         <a href="Character-handling.html#Character%20handling">
+                          Character handling
+                         </a>
+                        </li>
+                       </ul>
+                       <li>
+                        <a href="Mathematical-functions.html#Mathematical%20functions">
+                         Mathematical functions
+                        </a>
+                        <li>
+                         <a href="Questions-for-Chapter-13.html#Questions%20for%20Chapter%2013">
+                          Questions for Chapter 13
+                         </a>
+                        </li>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </ul>
+                   <li>
+                    <a name="toc_Arrays">
+                    </a>
+                    <a href="Arrays.html#Arrays">
+                     Arrays
+                    </a>
+                    <ul>
+                     <li>
+                      <a href="Array-bounds.html#Array%20bounds">
+                       Array bounds
+                      </a>
+                      <li>
+                       <a href="Arrays-and-for-loops.html#Arrays%20and%20for%20loops">
+                        Arrays and
+                        <code>
+                         for
+                        </code>
+                        loops
+                       </a>
+                       <li>
+                        <a href="Multidimensional-arrays.html#Multidimensional%20arrays">
+                         Multidimensional arrays
+                        </a>
+                        <li>
+                         <a href="Arrays-and-nested-loops.html#Arrays%20and%20nested%20loops">
+                          Arrays and nested loops
+                         </a>
+                         <li>
+                          <a href="Initializing-arrays.html#Initializing%20arrays">
+                           Initializing arrays
+                          </a>
+                          <li>
+                           <a href="Arrays-as-Parameters.html#Arrays%20as%20Parameters">
+                            Arrays as Parameters
+                           </a>
+                           <li>
+                            <a href="Questions-for-Chapter-14.html#Questions%20for%20Chapter%2014">
+                             Questions for Chapter 14
+                            </a>
+                           </li>
+                          </li>
+                         </li>
+                        </li>
+                       </li>
+                      </li>
+                     </li>
+                    </ul>
+                    <li>
+                     <a name="toc_Strings">
+                     </a>
+                     <a href="Strings.html#Strings">
+                      Strings
+                     </a>
+                     <ul>
+                      <li>
+                       <a href="Conventions-and-declarations.html#Conventions%20and%20declarations">
+                        Conventions and declarations
+                       </a>
+                       <li>
+                        <a href="Initializing-strings.html#Initializing%20strings">
+                         Initializing strings
+                        </a>
+                        <li>
+                         <a href="String-arrays.html#String%20arrays">
+                          String arrays
+                         </a>
+                         <li>
+                          <a href="String-library-functions.html#String%20library%20functions">
+                           String library functions
+                          </a>
+                          <li>
+                           <a href="Questions-for-Chapter-15.html#Questions%20for%20Chapter%2015">
+                            Questions for Chapter 15
+                           </a>
+                          </li>
+                         </li>
+                        </li>
+                       </li>
+                      </li>
+                     </ul>
+                     <li>
+                      <a name="toc_Input%20and%20output">
+                      </a>
+                      <a href="Input-and-output.html#Input%20and%20output">
+                       Input and output
+                      </a>
+                      <ul>
+                       <li>
+                        <a href="High-level-file-routines.html#High-level%20file%20routines">
+                         High-level file routines
+                        </a>
+                        <ul>
+                         <li>
+                          <a href="Opening-a-file.html#Opening%20a%20file">
+                           Opening a file
+                          </a>
+                          <li>
+                           <a href="Closing-a-file.html#Closing%20a%20file">
+                            Closing a file
+                           </a>
+                           <li>
+                            <a href="Block-input-and-output.html#Block%20input%20and%20output">
+                             Block input and output
+                            </a>
+                            <li>
+                             <a href="File-position.html#File%20position">
+                              File position
+                             </a>
+                             <li>
+                              <a href="Stream-buffering.html#Stream%20buffering">
+                               Stream buffering
+                              </a>
+                              <li>
+                               <a href="End-of-file-and-error-functions.html#End-of-file%20and%20error%20functions">
+                                End-of-file and error functions
+                               </a>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </ul>
+                        <li>
+                         <a href="String-output-and-input.html#String%20output%20and%20input">
+                          String output and input
+                         </a>
+                         <ul>
+                          <li>
+                           <a href="Unformatted-string-output.html#Unformatted%20string%20output">
+                            Unformatted string output
+                           </a>
+                           <ul>
+                            <li>
+                             <a href="puts.html#puts">
+                              <code>
+                               puts
+                              </code>
+                             </a>
+                             <li>
+                              <a href="fputs.html#fputs">
+                               <code>
+                                fputs
+                               </code>
+                              </a>
+                             </li>
+                            </li>
+                           </ul>
+                           <li>
+                            <a href="Formatted-string-output.html#Formatted%20string%20output">
+                             Formatted string output
+                            </a>
+                            <ul>
+                             <li>
+                              <a href="printf.html#printf">
+                               <code>
+                                printf
+                               </code>
+                              </a>
+                              <li>
+                               <a href="Formatted-output-conversion-specifiers.html#Formatted%20output%20conversion%20specifiers">
+                                Formatted output conversion specifiers
+                               </a>
+                              </li>
+                             </li>
+                            </ul>
+                            <li>
+                             <a href="fprintf.html#fprintf">
+                              <code>
+                               fprintf
+                              </code>
+                             </a>
+                             <li>
+                              <a href="asprintf.html#asprintf">
+                               <code>
+                                asprintf
+                               </code>
+                              </a>
+                              <li>
+                               <a href="Deprecated-formatted-string-output-functions.html#Deprecated%20formatted%20string%20output%20functions">
+                                Deprecated formatted string output functions
+                               </a>
+                               <ul>
+                                <li>
+                                 <a href="sprintf.html#sprintf">
+                                  <code>
+                                   sprintf
+                                  </code>
+                                 </a>
+                                </li>
+                               </ul>
+                               <li>
+                                <a href="String-input.html#String%20input">
+                                 String input
+                                </a>
+                                <ul>
+                                 <li>
+                                  <a href="getline.html#getline">
+                                   <code>
+                                    getline
+                                   </code>
+                                  </a>
+                                  <li>
+                                   <a href="getdelim.html#getdelim">
+                                    <code>
+                                     getdelim
+                                    </code>
+                                   </a>
+                                  </li>
+                                 </li>
+                                </ul>
+                                <li>
+                                 <a href="Deprecated-string-input-functions.html#Deprecated%20string%20input%20functions">
+                                  Deprecated string input functions
+                                 </a>
+                                 <ul>
+                                  <li>
+                                   <a href="gets.html#gets">
+                                    <code>
+                                     gets
+                                    </code>
+                                   </a>
+                                   <li>
+                                    <a href="fgets.html#fgets">
+                                     <code>
+                                      fgets
+                                     </code>
+                                    </a>
+                                   </li>
+                                  </li>
+                                 </ul>
+                                 <li>
+                                  <a href="Formatted-string-input.html#Formatted%20string%20input">
+                                   Formatted string input
+                                  </a>
+                                  <ul>
+                                   <li>
+                                    <a href="sscanf.html#sscanf">
+                                     <code>
+                                      sscanf
+                                     </code>
+                                    </a>
+                                    <li>
+                                     <a href="Formatted-input-conversion-specifiers.html#Formatted%20input%20conversion%20specifiers">
+                                      Formatted input conversion specifiers
+                                     </a>
+                                    </li>
+                                   </li>
+                                  </ul>
+                                  <li>
+                                   <a href="Deprecated-formatted-string-input-functions.html#Deprecated%20formatted%20string%20input%20functions">
+                                    Deprecated formatted string input functions
+                                   </a>
+                                   <ul>
+                                    <li>
+                                     <a href="scanf.html#scanf">
+                                      <code>
+                                       scanf
+                                      </code>
+                                     </a>
+                                     <li>
+                                      <a href="String-overflows-with-scanf.html#String%20overflows%20with%20scanf">
+                                       String overflows with scanf
+                                      </a>
+                                     </li>
+                                    </li>
+                                   </ul>
+                                   <li>
+                                    <a href="fscanf.html#fscanf">
+                                     <code>
+                                      fscanf
+                                     </code>
+                                    </a>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </ul>
+                         <li>
+                          <a href="Single-character-input-and-output.html#Single-character%20input%20and%20output">
+                           Single-character input and output
+                          </a>
+                          <ul>
+                           <li>
+                            <a href="getchar.html#getchar">
+                             <code>
+                              getchar
+                             </code>
+                            </a>
+                            <li>
+                             <a href="putchar.html#putchar">
+                              <code>
+                               putchar
+                              </code>
+                             </a>
+                             <li>
+                              <a href="getc-and-fgetc.html#getc%20and%20fgetc">
+                               <code>
+                                getc
+                               </code>
+                               and
+                               <code>
+                                fgetc
+                               </code>
+                              </a>
+                              <li>
+                               <a href="putc-and-fputc.html#putc%20and%20fputc">
+                                <code>
+                                 putc
+                                </code>
+                                and
+                                <code>
+                                 fputc
+                                </code>
+                               </a>
+                               <li>
+                                <a href="ungetc.html#ungetc">
+                                 <code>
+                                  ungetc()
+                                 </code>
+                                </a>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </ul>
+                          <li>
+                           <a href="Programming-with-pipes.html#Programming%20with%20pipes">
+                            Programming with pipes
+                           </a>
+                           <li>
+                            <a href="Low-level-file-routines.html#Low-level%20file%20routines">
+                             Low-level file routines
+                            </a>
+                            <ul>
+                             <li>
+                              <a href="Usual-file-name-errors.html#Usual%20file%20name%20errors">
+                               Usual file name errors
+                              </a>
+                              <li>
+                               <a href="Opening-files-at-a-low-level.html#Opening%20files%20at%20a%20low%20level">
+                                Opening files at a low level
+                               </a>
+                               <ul>
+                                <li>
+                                 <a href="File-creation.html#File%20creation">
+                                  File creation
+                                 </a>
+                                </li>
+                               </ul>
+                               <li>
+                                <a href="Closing-files-at-a-low-level.html#Closing%20files%20at%20a%20low%20level">
+                                 Closing files at a low level
+                                </a>
+                                <li>
+                                 <a href="Reading-files-at-a-low-level.html#Reading%20files%20at%20a%20low%20level">
+                                  Reading files at a low level
+                                 </a>
+                                 <li>
+                                  <a href="Writing-files-at-a-low-level.html#Writing%20files%20at%20a%20low%20level">
+                                   Writing files at a low level
+                                  </a>
+                                  <li>
+                                   <a href="Finding-file-positions-at-a-low-level.html#Finding%20file%20positions%20at%20a%20low%20level">
+                                    Finding file positions at a low level
+                                   </a>
+                                   <li>
+                                    <a href="Deleting-files-at-a-low-level.html#Deleting%20files%20at%20a%20low%20level">
+                                     Deleting files at a low level
+                                    </a>
+                                    <li>
+                                     <a href="Renaming-files-at-a-low-level.html#Renaming%20files%20at%20a%20low%20level">
+                                      Renaming files at a low level
+                                     </a>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </ul>
+                            <li>
+                             <a href="Questions-16.html#Questions%2016">
+                              Questions
+                             </a>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </li>
+                       </li>
+                      </ul>
+                      <li>
+                       <a name="toc_Putting%20a%20program%20together">
+                       </a>
+                       <a href="Putting-a-program-together.html#Putting%20a%20program%20together">
+                        Putting a program together
+                       </a>
+                       <ul>
+                        <li>
+                         <a href="argc-and-argv.html#argc%20and%20argv">
+                          <code>
+                           argc
+                          </code>
+                          and
+                          <code>
+                           argv
+                          </code>
+                         </a>
+                         <li>
+                          <a href="Processing-command-line-options.html#Processing%20command-line%20options">
+                           Processing command-line options
+                          </a>
+                          <ul>
+                           <li>
+                            <a href="argp-description.html#argp%20description">
+                             <code>
+                              argp
+                             </code>
+                             description
+                            </a>
+                            <li>
+                             <a href="argp-example.html#argp%20example">
+                              <code>
+                               argp
+                              </code>
+                              example
+                             </a>
+                            </li>
+                           </li>
+                          </ul>
+                          <li>
+                           <a href="Environment-variables.html#Environment%20variables">
+                            Environment variables
+                           </a>
+                           <li>
+                            <a href="Compiling-multiple-files.html#Compiling%20multiple%20files">
+                             Compiling multiple files
+                            </a>
+                            <li>
+                             <a href="Writing-a-makefile.html#Writing%20a%20makefile">
+                              Writing a makefile
+                             </a>
+                             <ul>
+                              <li>
+                               <a href="Rule-Introduction.html#Rule%20Introduction">
+                                What a Rule Looks Like
+                               </a>
+                               <li>
+                                <a href="A-simple-makefile.html#A%20simple%20makefile">
+                                 A simple makefile
+                                </a>
+                                <li>
+                                 <a href="make-in-action.html#make%20in%20action">
+                                  make in action
+                                 </a>
+                                 <li>
+                                  <a href="Variables-simplify-makefiles.html#Variables%20simplify%20makefiles">
+                                   Variables simplify makefiles
+                                  </a>
+                                  <li>
+                                   <a href="Letting-make-deduce-commands.html#Letting%20make%20deduce%20commands">
+                                    Letting make deduce commands
+                                   </a>
+                                   <li>
+                                    <a href="Combining-rules-by-prerequisite.html#Combining%20rules%20by%20prerequisite">
+                                     Combining rules by prerequisite
+                                    </a>
+                                    <li>
+                                     <a href="Rules-for-cleaning-the-directory.html#Rules%20for%20cleaning%20the%20directory">
+                                      Rules for cleaning the directory
+                                     </a>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </ul>
+                             <li>
+                              <a href="Building-a-library.html#Building%20a%20library">
+                               Building a library
+                              </a>
+                              <li>
+                               <a href="Questions-17.html#Questions%2017">
+                                Questions
+                               </a>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </li>
+                       </ul>
+                       <li>
+                        <a name="toc_Advanced%20operators">
+                        </a>
+                        <a href="Advanced-operators.html#Advanced%20operators">
+                         Advanced operators
+                        </a>
+                        <ul>
+                         <li>
+                          <a href="Hidden-operators-and-values.html#Hidden%20operators%20and%20values">
+                           Hidden operators and values
+                          </a>
+                          <ul>
+                           <li>
+                            <a href="Hidden-assignments.html#Hidden%20assignments">
+                             Hidden assignments
+                            </a>
+                            <li>
+                             <a href="Postfix-and-prefix----and---.html#Postfix%20and%20prefix%20++%20and%20--">
+                              Postfix and prefix
+                              <code>
+                               ++
+                              </code>
+                              and
+                              <code>
+                               --
+                              </code>
+                             </a>
+                             <li>
+                              <a href="Arrays-and-hidden-operators.html#Arrays%20and%20hidden%20operators">
+                               Arrays and hidden operators
+                              </a>
+                              <li>
+                               <a href="A-warning-about-style.html#A%20warning%20about%20style">
+                                A warning about style
+                               </a>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </ul>
+                          <li>
+                           <a href="The-comma-operator.html#The%20comma%20operator">
+                            The comma operator
+                           </a>
+                           <li>
+                            <a href="Machine-level-operators.html#Machine-level%20operators">
+                             Machine-level operators
+                            </a>
+                            <ul>
+                             <li>
+                              <a href="Bitwise-operators.html#Bitwise%20operators">
+                               Bitwise operators
+                              </a>
+                              <li>
+                               <a href="Shift-operations.html#Shift%20operations">
+                                Shift operations
+                               </a>
+                               <li>
+                                <a href="Truth-tables-and-bit-masks.html#Truth%20tables%20and%20bit%20masks">
+                                 Truth tables and bit masks
+                                </a>
+                                <ul>
+                                 <li>
+                                  <a href="Bitwise-NOT.html#Bitwise%20NOT">
+                                   Bitwise NOT
+                                  </a>
+                                  <li>
+                                   <a href="Bitwise-AND.html#Bitwise%20AND">
+                                    Bitwise AND
+                                   </a>
+                                   <li>
+                                    <a href="Bitwise-inclusive-OR.html#Bitwise%20inclusive%20OR">
+                                     Bitwise inclusive OR
+                                    </a>
+                                    <li>
+                                     <a href="Bitwise-exclusive-OR--XOR-EOR-.html#Bitwise%20exclusive%20OR%20(XOR%2fEOR)">
+                                      Bitwise exclusive OR (XOR/EOR)
+                                     </a>
+                                     <li>
+                                      <a href="Masks.html#Masks">
+                                       Masks
+                                      </a>
+                                     </li>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </ul>
+                               </li>
+                              </li>
+                             </li>
+                            </ul>
+                            <li>
+                             <a href="Questions-18.html#Questions%2018">
+                              Questions 18
+                             </a>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </ul>
+                        <li>
+                         <a name="toc_More%20data%20types">
+                         </a>
+                         <a href="More-data-types.html#More%20data%20types">
+                          More data types
+                         </a>
+                         <ul>
+                          <li>
+                           <a href="enum.html#enum">
+                            <code>
+                             enum
+                            </code>
+                           </a>
+                           <li>
+                            <a href="void.html#void">
+                             <code>
+                              void
+                             </code>
+                            </a>
+                            <li>
+                             <a href="volatile.html#volatile">
+                              <code>
+                               volatile
+                              </code>
+                             </a>
+                             <li>
+                              <a href="Constants.html#Constants">
+                               Constants
+                              </a>
+                              <ul>
+                               <li>
+                                <a href="const.html#const">
+                                 <code>
+                                  const
+                                 </code>
+                                </a>
+                                <li>
+                                 <a href="Constant-expressions.html#Constant%20expressions">
+                                  Constant expressions
+                                 </a>
+                                </li>
+                               </li>
+                              </ul>
+                              <li>
+                               <a href="struct-and-union.html#struct%20and%20union">
+                                <code>
+                                 struct
+                                </code>
+                                and
+                                <code>
+                                 union
+                                </code>
+                               </a>
+                               <li>
+                                <a href="typedef.html#typedef">
+                                 <code>
+                                  typedef
+                                 </code>
+                                </a>
+                                <li>
+                                 <a href="Questions-19.html#Questions%2019">
+                                  Questions 19
+                                 </a>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </ul>
+                         <li>
+                          <a name="toc_Data%20structures">
+                          </a>
+                          <a href="Data-structures.html#Data%20structures">
+                           Data structures
+                          </a>
+                          <ul>
+                           <li>
+                            <a href="struct.html#struct">
+                             <code>
+                              struct
+                             </code>
+                            </a>
+                            <ul>
+                             <li>
+                              <a href="Structure-declarations.html#Structure%20declarations">
+                               Structure declarations
+                              </a>
+                              <ul>
+                               <li>
+                                <a href="Structure-declarations-using-typedef.html#Structure%20declarations%20using%20typedef">
+                                 Structure declarations using typedef
+                                </a>
+                               </li>
+                              </ul>
+                              <li>
+                               <a href="Using-structures.html#Using%20structures">
+                                Using structures
+                               </a>
+                               <li>
+                                <a href="Arrays-of-structures.html#Arrays%20of%20structures">
+                                 Arrays of structures
+                                </a>
+                                <li>
+                                 <a href="Nested-structures.html#Nested%20structures">
+                                  Nested structures
+                                 </a>
+                                 <li>
+                                  <a href="Pointers-to-structures.html#Pointers%20to%20structures">
+                                   Pointers to structures
+                                  </a>
+                                  <li>
+                                   <a href="Initializing-structures.html#Initializing%20structures">
+                                    Initializing structures
+                                   </a>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </ul>
+                            <li>
+                             <a href="Memory-allocation.html#Memory%20allocation">
+                              Memory allocation
+                             </a>
+                             <li>
+                              <a href="union.html#union">
+                               <code>
+                                union
+                               </code>
+                              </a>
+                              <ul>
+                               <li>
+                                <a href="Declaration-of-unions.html#Declaration%20of%20unions">
+                                 Declaration of unions
+                                </a>
+                                <li>
+                                 <a href="Using-unions.html#Using%20unions">
+                                  Using unions
+                                 </a>
+                                </li>
+                               </li>
+                              </ul>
+                              <li>
+                               <a href="Complex-data-structures.html#Complex%20data%20structures">
+                                Complex data structures
+                               </a>
+                               <ul>
+                                <li>
+                                 <a href="Data-structure-diagrams.html#Data%20structure%20diagrams">
+                                  Data structure diagrams
+                                 </a>
+                                 <li>
+                                  <a href="Dynamic-data-structures.html#Dynamic%20data%20structures">
+                                   Dynamic data structures, Pointers and Dynamic Memory
+                                  </a>
+                                  <li>
+                                   <a href="Lists-and-trees.html#Lists%20and%20trees">
+                                    Lists and trees
+                                   </a>
+                                   <ul>
+                                    <li>
+                                     <a href="Linked-lists.html#Linked%20lists">
+                                      Linked lists.
+                                     </a>
+                                     <li>
+                                      <a href="Binary-trees.html#Binary%20trees">
+                                       Binary trees
+                                      </a>
+                                     </li>
+                                    </li>
+                                   </ul>
+                                   <li>
+                                    <a href="Setting-up-a-data-structure.html#Setting%20up%20a%20data%20structure">
+                                     Setting up a data structure
+                                    </a>
+                                    <ul>
+                                     <li>
+                                      <a href="Designing-your-data-structure.html#Designing%20your%20data%20structure">
+                                       Designing your data structure
+                                      </a>
+                                      <li>
+                                       <a href="Initializing-your-data-structure.html#Initializing%20your%20data%20structure">
+                                        Initializing your data structure
+                                       </a>
+                                      </li>
+                                     </li>
+                                    </ul>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </ul>
+                               <li>
+                                <a href="Further-data-structure-examples.html#Further%20data%20structure%20examples">
+                                 Further data structure examples
+                                </a>
+                                <li>
+                                 <a href="Questions-20.html#Questions%2020">
+                                  Questions 20
+                                 </a>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </ul>
+                          <li>
+                           <a name="toc_Recursion">
+                           </a>
+                           <a href="Recursion.html#Recursion">
+                            Recursion
+                           </a>
+                           <ul>
+                            <li>
+                             <a href="The-stack.html#The%20stack">
+                              The stack
+                             </a>
+                             <ul>
+                              <li>
+                               <a href="The-stack-in-detail.html#The%20stack%20in%20detail">
+                                The stack in detail
+                               </a>
+                              </li>
+                             </ul>
+                             <li>
+                              <a href="Controlled-recursion.html#Controlled%20recursion">
+                               Controlled recursion
+                              </a>
+                              <li>
+                               <a href="Controlled-recursion-with-data-structures.html#Controlled%20recursion%20with%20data%20structures">
+                                Controlled recursion with data structures
+                               </a>
+                               <li>
+                                <a href="Recursion-summary.html#Recursion%20summary">
+                                 Recursion summary
+                                </a>
+                                <li>
+                                 <a href="Questions-21.html#Questions%2021">
+                                  Questions 21
+                                 </a>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </ul>
+                           <li>
+                            <a name="toc_Style">
+                            </a>
+                            <a href="Style.html#Style">
+                             Style
+                            </a>
+                            <ul>
+                             <li>
+                              <a href="Formatting-code.html#Formatting%20code">
+                               Formatting code
+                              </a>
+                              <li>
+                               <a href="Comments-and-style.html#Comments%20and%20style">
+                                Comments and style
+                               </a>
+                               <li>
+                                <a href="Variable-and-function-names.html#Variable%20and%20function%20names">
+                                 Variable and function names
+                                </a>
+                                <li>
+                                 <a href="Declarations-and-initialization.html#Declarations%20and%20initialization">
+                                  Declarations and initialization
+                                 </a>
+                                 <li>
+                                  <a href="Global-variables-and-style.html#Global%20variables%20and%20style">
+                                   Global variables and style
+                                  </a>
+                                  <li>
+                                   <a href="Hidden-operators-and-style.html#Hidden%20operators%20and%20style">
+                                    Hidden operators and style
+                                   </a>
+                                   <li>
+                                    <a href="Final-words-on-style.html#Final%20words%20on%20style">
+                                     Final words on style
+                                    </a>
+                                    <li>
+                                     <a href="Questions-22.html#Questions%2022">
+                                      Questions 22
+                                     </a>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </ul>
+                            <li>
+                             <a name="toc_Debugging">
+                             </a>
+                             <a href="Debugging.html#Debugging">
+                              Debugging
+                             </a>
+                             <ul>
+                              <li>
+                               <a href="Compile-time-errors.html#Compile-time%20errors">
+                                Compile-time errors
+                               </a>
+                               <ul>
+                                <li>
+                                 <a href="parse-error-at....html#parse%20error%20at...">
+                                  parse error at
+                                  <small>
+                                   ...
+                                  </small>
+                                  , parse error before
+                                  <small>
+                                   ...
+                                  </small>
+                                 </a>
+                                 <li>
+                                  <a href="undefined-reference-to....html#undefined%20reference%20to...">
+                                   undefined reference to
+                                   <small>
+                                    ...
+                                   </small>
+                                  </a>
+                                  <li>
+                                   <a href="unterminated-string-or-character-constant.html#unterminated%20string%20or%20character%20constant">
+                                    unterminated string or character constant
+                                   </a>
+                                  </li>
+                                 </li>
+                                </li>
+                               </ul>
+                               <li>
+                                <a href="...undeclared--first-use-in-this-function-.html#...undeclared%20(first%20use%20in%20this%20function)">
+                                 <small>
+                                  ...
+                                 </small>
+                                 undeclared (first use in this function)
+                                </a>
+                                <ul>
+                                 <li>
+                                  <a href="different-type-arg.html#different%20type%20arg">
+                                   different type arg
+                                  </a>
+                                  <li>
+                                   <a href="too-few-parameters....html#too%20few%20parameters...">
+                                    too few parameters
+                                    <small>
+                                     ...
+                                    </small>
+                                    , too many parameters
+                                    <small>
+                                     ...
+                                    </small>
+                                   </a>
+                                  </li>
+                                 </li>
+                                </ul>
+                                <li>
+                                 <a href="Run-time-errors.html#Run-time%20errors">
+                                  Run-time errors
+                                 </a>
+                                 <ul>
+                                  <li>
+                                   <a href="Confusion-of---and---.html#Confusion%20of%20%3d%20and%20%3d%3d">
+                                    Confusion of
+                                    <code>
+                                     =
+                                    </code>
+                                    and
+                                    <code>
+                                     ==
+                                    </code>
+                                   </a>
+                                   <li>
+                                    <a href="Confusing-foo---and---foo.html#Confusing%20foo++%20and%20++foo">
+                                     Confusing
+                                     <code>
+                                      foo++
+                                     </code>
+                                     and
+                                     <code>
+                                      ++foo
+                                     </code>
+                                    </a>
+                                    <li>
+                                     <a href="Unwarranted-assumptions-about-storage.html#Unwarranted%20assumptions%20about%20storage">
+                                      Unwarranted assumptions about storage
+                                     </a>
+                                     <li>
+                                      <a href="Array-out-of-bounds.html#Array%20out%20of%20bounds">
+                                       Array out of bounds
+                                      </a>
+                                      <li>
+                                       <a href="Uncoordinated-output.html#Uncoordinated%20output">
+                                        Uncoordinated output
+                                       </a>
+                                       <li>
+                                        <a href="Global-variables-and-recursion.html#Global%20variables%20and%20recursion">
+                                         Global variables and recursion
+                                        </a>
+                                       </li>
+                                      </li>
+                                     </li>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </ul>
+                                 <li>
+                                  <a href="Mathematical-errors.html#Mathematical%20errors">
+                                   Mathematical errors
+                                  </a>
+                                  <li>
+                                   <a href="Introduction-to-GDB.html#Introduction%20to%20GDB">
+                                    Introduction to GDB
+                                   </a>
+                                   <li>
+                                    <a href="Questions-23.html#Questions%2023">
+                                     Questions 23
+                                    </a>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </ul>
+                             <li>
+                              <a name="toc_Example%20programs">
+                              </a>
+                              <a href="Example-programs.html#Example%20programs">
+                               Example programs
+                              </a>
+                              <li>
+                               <a name="toc_A%20note%20from%20the%20original%20author">
+                               </a>
+                               <a href="A-note-from-the-original-author.html#A%20note%20from%20the%20original%20author">
+                                A note from the original author
+                               </a>
+                               <li>
+                                <a name="toc_Reserved%20words%20in%20C">
+                                </a>
+                                <a href="Reserved-words-in-C.html#Reserved%20words%20in%20C">
+                                 Reserved words in C
+                                </a>
+                                <li>
+                                 <a name="toc_Precedence%20of%20operators">
+                                 </a>
+                                 <a href="Precedence-of-operators.html#Precedence%20of%20operators">
+                                  Precedence of operators
+                                 </a>
+                                 <li>
+                                  <a name="toc_Special%20characters">
+                                  </a>
+                                  <a href="Special-characters.html#Special%20characters">
+                                   Special characters
+                                  </a>
+                                  <li>
+                                   <a name="toc_Character%20conversion%20table">
+                                   </a>
+                                   <a href="Character-conversion-table.html#Character%20conversion%20table">
+                                    Character conversion table
+                                   </a>
+                                   <li>
+                                    <a name="toc_A%20word%20about%20goto">
+                                    </a>
+                                    <a href="A-word-about-goto.html#A%20word%20about%20goto">
+                                     A word about
+                                     <code>
+                                      goto
+                                     </code>
+                                    </a>
+                                    <li>
+                                     <a name="toc_Answers%20to%20questions">
+                                     </a>
+                                     <a href="Answers-to-questions.html#Answers%20to%20questions">
+                                      Answers to questions
+                                     </a>
+                                     <li>
+                                      <a name="toc_Bibliography">
+                                      </a>
+                                      <a href="Bibliography.html#Bibliography">
+                                       Bibliography
+                                      </a>
+                                      <li>
+                                       <a name="toc_Glossary">
+                                       </a>
+                                       <a href="Glossary.html#Glossary">
+                                        Glossary
+                                       </a>
+                                       <li>
+                                        <a name="toc_Code%20index">
+                                        </a>
+                                        <a href="Code-index.html#Code%20index">
+                                         Code index
+                                        </a>
+                                        <li>
+                                         <a name="toc_Concept%20index">
+                                         </a>
+                                         <a href="Concept-index.html#Concept%20index">
+                                          Concept index
+                                         </a>
+                                         <li>
+                                          <a name="toc_Bits%20and%20pieces">
+                                          </a>
+                                          <a href="Bits-and-pieces.html#Bits%20and%20pieces">
+                                           Bits and pieces
+                                          </a>
+                                          <ul>
+                                           <li>
+                                            <a href="Allocating-memory-for-strings.html#Allocating%20memory%20for%20strings">
+                                             Allocating memory for strings
+                                            </a>
+                                            <li>
+                                             <a href="Characters.html#Characters">
+                                              Characters
+                                             </a>
+                                             <li>
+                                              <a href="Assigning-variables-to-one-another.html#Assigning%20variables%20to%20one%20another">
+                                               Assigning variables to one another
+                                              </a>
+                                              <li>
+                                               <a href="Function-pointers.html#Function%20pointers">
+                                                Function pointers
+                                               </a>
+                                              </li>
+                                             </li>
+                                            </li>
+                                           </li>
+                                          </ul>
+                                         </li>
+                                        </li>
+                                       </li>
+                                      </li>
+                                     </li>
+                                    </li>
+                                   </li>
+                                  </li>
+                                 </li>
+                                </li>
+                               </li>
+                              </li>
+                             </li>
+                            </li>
+                           </li>
+                          </li>
+                         </li>
+                        </li>
+                       </li>
+                      </li>
+                     </li>
+                    </li>
+                   </li>
+                  </li>
+                 </li>
+                </li>
+               </li>
+              </li>
+             </li>
+            </li>
+           </li>
+          </li>
+         </li>
+        </li>
+       </li>
+      </li>
+     </li>
+    </ul>
+   </p>
+  </div>
+ </body>
+</html>
