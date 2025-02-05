@@ -7,5 +7,3 @@
 ```sh
   pip install beautifulsoup4
 ```
-```
-```
